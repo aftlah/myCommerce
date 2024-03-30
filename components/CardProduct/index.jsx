@@ -2,15 +2,23 @@ import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 
 const CardProduct = ({ items }) => {
-    // console.log(items.images[0]);
+    console.log(items);
     return (
         <TouchableOpacity
             style={styles.CardWrapper}
             onPress={() => alert('Hello World')}
         >
 
-            <Text style={styles.namaBrand}>{items.brand}</Text>
-            <Image source={{ uri: items.images[2] }} style={styles.image} />
+            <Text style={styles.namaBrand}>{items.title}</Text>
+            <Image source={{ uri: items.thumbnail }} style={styles.image} />
+            <View style={{ marginTop: 10 }}>
+                <Text>Price : ${items.price}</Text>
+                <Text>Stock : {items.stock}</Text>
+            </View>
+            <View style={{ alignItems: 'flex-end' }}>
+                <Text>⭐{items.rating}</Text>
+            </View>
+
         </TouchableOpacity>
     )
 }
@@ -35,7 +43,7 @@ const styles = StyleSheet.create({
     },
     CardWrapper: {
         width: 150,
-        height: 200,
+        height: 250,
         backgroundColor: 'white',
         borderRadius: 10,
         elevation: 5,
