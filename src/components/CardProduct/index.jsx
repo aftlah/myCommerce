@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 
 const CardProduct = ({ items }) => {
-    console.log(items);
+    // console.log(items);
     return (
         <TouchableOpacity
             style={styles.CardWrapper}
