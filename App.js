@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Router from './src/router/index';
+import Main from './src/navigation/index';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 export default function App() {
   return (
-    <Router />
+    <NavigationContainer>
+      <Main />
+    </NavigationContainer>
   );
 }
 

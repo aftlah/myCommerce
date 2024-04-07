@@ -41,7 +41,7 @@ const HomePage = ({ navigation }) => {
         FetchData();
     }, []);
 
-    console.log("Data Category :" + category)
+    // console.log("Data Category :" + category)
 
     return (
         <ScrollView style={{ flex: 1 }}>

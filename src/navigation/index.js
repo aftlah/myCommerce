@@ -3,7 +3,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { DetailCategoryPage, HomePage, LoginPage, ProfilePage } from '../pages/index';
+import { DetailCategoryPage, HomePage, LoginScreen, ProfilePage } from '../pages/index';
 
 
 const Stack = createNativeStackNavigator();
@@ -50,19 +50,19 @@ const HomeScreen = () => {
 }
 
 
-const Router = () => {
+const Main = () => {
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName='HomeScreen'>
-                <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
-                <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="Category" component={DetailCategoryPage} options={{ headerShown: true, animation: "ios", headerTitleAlign: 'center', headerTitle: 'Category' }} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        // <NavigationContainer>
+        <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{}}>
+            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Category" component={DetailCategoryPage} options={{ headerShown: true, animation: "ios", headerTitleAlign: 'center', headerTitle: 'Category' }} />
+        </Stack.Navigator>
+        // </NavigationContainer>
     )
 }
 
-export default Router
+export default Main
 
 const styles = StyleSheet.create({
     container: {
@@ -70,6 +70,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        
+
     },
 });

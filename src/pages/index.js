@@ -1,6 +1,6 @@
 import HomePage from "./HomePage";
 import ProfilePage from "./ProfilePage";
 import DetailCategoryPage from "./DetailCategoryPage";
-import LoginPage from "./Auth/LoginPage";
+import LoginScreen from "./Auth/LoginScreen";
 
-export { HomePage, ProfilePage, DetailCategoryPage, LoginPage };
+export { HomePage, ProfilePage, DetailCategoryPage, LoginScreen };
